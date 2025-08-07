@@ -1,11 +1,8 @@
-// C:/Users/mukul/WebstormProjects/shopify-clone/src/components/Hero.jsx
 
 import React from 'react';
 
 const Hero = () => {
     return (
-        // 1. Use `min-h-screen` to fill the screen but allow it to grow if needed.
-        // 2. Use responsive padding (`px-*`) for better control than `left-[5%]`.
         <div className={"font-[Satoshi] flex flex-col items-start justify-center gap-8 px-6 md:px-12 lg:px-24 min-h-screen"}>
             <div className="lg:w-3/5">
                 <h1 className={"text-5xl md:text-7xl lg:text-8xl tracking-tight leading-none text-white"}>Be the next one to watch</h1>

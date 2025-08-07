@@ -1,4 +1,3 @@
-// C:/Users/mukul/WebstormProjects/shopify-clone/src/App.jsx
 
 import React from 'react';
 import Navbar from "./components/Navbar.jsx";
@@ -8,8 +7,6 @@ import VideoPlayer from "./components/Mini-components/VideoPlayer.jsx";
 
 const App = () => {
     return (
-        // 1. Remove absolute positioning. This div will now grow with its content.
-        //    bg-black provides a solid background behind the video.
         <main className="bg-black">
             {/* 2. The VideoPlayer is fixed to the background and won't affect layout */}
             <VideoPlayer/>
