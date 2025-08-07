@@ -28,7 +28,7 @@ const Navbar = () => {
     const NavLink = ({ href, children }) => (
         <a
             href={href}
-            className="relative sm:text-[12px] lg:text-xl font-medium tracking-wide
+            className="relative z-50 sm:text-[12px] lg:text-xl font-medium tracking-wide
                        after:content-[''] after:absolute after:left-0 after:-bottom-1
                        after:h-[2px] after:w-0 after:bg-white
                        after:transition-all after:duration-300
@@ -40,7 +40,7 @@ const Navbar = () => {
 
     return (
         <>
-            <header className="font-[Satoshi] relative z-50 flex items-center justify-between px-4 sm:px-8 py-5 text-white border-b border-white/10">
+            <header className="font-[Satoshi] fixed z-50 w-full flex items-center justify-between px-4 sm:px-8 py-5 text-white border-b border-white/10">
                 {/* left  */}
                 <div className="flex items-center gap-8">
                     <a href="/">

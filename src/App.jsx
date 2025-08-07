@@ -1,38 +1,28 @@
+// C:/Users/mukul/WebstormProjects/shopify-clone/src/App.jsx
+
 import React from 'react';
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
-import bgVideo from '/assets/bg-video.mp4';
-import FallBackBG from "./components/Mini-components/FallBackBG.jsx";
-import Hero2 from "./components/Hero2.jsx"; // only works if in public
+import Hero2 from "./components/Hero2.jsx";
+import VideoPlayer from "./components/Mini-components/VideoPlayer.jsx";
 
 const App = () => {
     return (
-        <div className="relative h-screen w-full  ">
+        // 1. Remove absolute positioning. This div will now grow with its content.
+        //    bg-black provides a solid background behind the video.
+        <main className="bg-black">
+            {/* 2. The VideoPlayer is fixed to the background and won't affect layout */}
+            <VideoPlayer/>
 
-            {/* Fallback Component */}
-            <div className="absolute top-0 left-0 w-full h-full z-[-2]">
-                <FallBackBG/>
-            </div>
+            {/* 3. A main content wrapper to ensure content is stacked correctly above the video */}
+            <section className="relative z-10">
+                <Navbar/>
+                <Hero/>
+            </section>
 
-            {/* Video Background */}
-            <video
-                className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-            >
-                <source src="/assets/bg-video.mp4" type="video/mp4"/>
-                {/* Optional: fallback text if browser doesn't support video */}
-                Your browser does not support the video tag.
-            </video>
-
-            {/* Foreground Content */}
-            <Navbar/>
-            <Hero/>
+            {/* 4. Hero2 is now a standard section that flows naturally after the main content */}
             <Hero2/>
-        </div>
+        </main>
     );
 }
 
