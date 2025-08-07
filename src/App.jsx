@@ -8,7 +8,7 @@ const App = () => {
             {/* Video Background */}
             <video
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                src="./src/assets/bg-video.mp4"
+                src="/assets/bg-video.mp4"
                 autoPlay
                 loop
                 muted

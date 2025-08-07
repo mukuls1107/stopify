@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logoUrl from '/src/assets/logo.svg';
+import logoUrl from '/assets/logo.svg';
 
 const Navbar = () => {
     // State to manage whether the mobile menu is open or closed
@@ -64,7 +64,7 @@ const Navbar = () => {
                 </div>
 
                 {/* menu buttong*/}
-                <div className="lg:hidden">
+                <div className="md:hidden">
                     <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -75,7 +75,7 @@ const Navbar = () => {
 
             {/* overlay mobile devie*/}
             <div
-                className={`md:hidden fixed inset-0 z-40 bg-black/80 backdrop-blur-sm transition-opacity duration-300
+                className={`lg:hidden fixed inset-0 z-40 bg-black/80 backdrop-blur-sm transition-opacity duration-300
                            ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
             >
                 <div className="font-[Satoshi] flex flex-col items-center justify-center h-full gap-8 text-white text-xl">
